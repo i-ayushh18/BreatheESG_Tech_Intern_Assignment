@@ -1,0 +1,29 @@
+# Render manifest for automatic deployment via Render (https://render.com)
+# Adjust names, plans, and regions as needed when creating services.
+
+services:
+  - type: web
+    name: breathesg-backend
+    env: docker
+    dockerfilePath: backend/Dockerfile
+    plan: free
+    # Environment variables should be configured in the Render dashboard or
+    # by setting `envVars` here with secure values. Do NOT commit secrets.
+    envVars:
+      - key: SECRET_KEY
+        sync: false
+      - key: DATABASE_URL
+        sync: false
+
+  - type: static
+    name: breathesg-frontend
+    env: static
+    plan: free
+    buildCommand: cd frontend && npm ci && npm run build
+    publishPath: frontend/build
+
+databases:
+  - name: breathesg-db
+    plan: starter
+    # When this database is provisioned, Render will provide a DATABASE_URL
+    # which you should copy into the backend service environment variables.

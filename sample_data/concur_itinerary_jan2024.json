@@ -1,0 +1,323 @@
+{
+  "export_metadata": {
+    "export_date": "2024-02-01T09:15:00Z",
+    "export_type": "itinerary_bulk",
+    "period_start": "2024-01-01",
+    "period_end": "2024-01-31",
+    "client_id": "TATA-MOTORS-001",
+    "api_version": "v4",
+    "total_itineraries": 6
+  },
+  "itineraries": [
+    {
+      "ID": "51519e89-2c1d-47ec-bd93-7c4ace9c57e6",
+      "ItinLocator": "TRIP-2024-001",
+      "TripName": "Mumbai client meeting",
+      "Employee": {
+        "EmployeeId": "E00421",
+        "LoginId": "rajesh.kumar@tata.com",
+        "FirstName": "Rajesh",
+        "LastName": "Kumar",
+        "Department": "Sales",
+        "CostCenter": "CC-1200"
+      },
+      "TripPurpose": "Client acquisition meeting",
+      "BookingDate": "2024-01-10T14:30:00Z",
+      "StartDateLocal": "2024-01-15T08:00:00",
+      "EndDateLocal": "2024-01-17T20:15:00",
+      "TotalEstimatedCost": 487.50,
+      "Bookings": [
+        {
+          "BookingOwner": "ConcurTravel",
+          "BookingSource": "Online",
+          "RecordLocator": "ABC123",
+          "Segments": {
+            "Air": [
+              {
+                "StartCityCode": "DEL",
+                "EndCityCode": "BOM",
+                "StartDateLocal": "2024-01-15T08:00:00",
+                "EndDateLocal": "2024-01-15T10:10:00",
+                "Cabin": "E",
+                "ClassOfService": "E",
+                "Vendor": "AI",
+                "VendorName": "Air India",
+                "FlightNumber": "AI-860",
+                "Duration": 130
+              },
+              {
+                "StartCityCode": "BOM",
+                "EndCityCode": "DEL",
+                "StartDateLocal": "2024-01-17T18:00:00",
+                "EndDateLocal": "2024-01-17T20:15:00",
+                "Cabin": "E",
+                "ClassOfService": "E",
+                "Vendor": "AI",
+                "VendorName": "Air India",
+                "FlightNumber": "AI-441",
+                "Duration": 135
+              }
+            ],
+            "Hotel": [
+              {
+                "Name": "Taj Lands End",
+                "VendorCode": "TAJ",
+                "StartCity": "Mumbai",
+                "StartCountry": "IN",
+                "StartDateLocal": "2024-01-15T15:00:00",
+                "EndDateLocal": "2024-01-17T11:00:00",
+                "DailyRate": 142.50,
+                "Currency": "USD",
+                "RoomType": "Deluxe"
+              }
+            ],
+            "Ride": [
+              {
+                "Name": "Uber",
+                "VendorName": "Uber",
+                "StartCity": "Mumbai",
+                "EndCity": "Mumbai",
+                "StartDateLocal": "2024-01-15T10:30:00",
+                "EndDateLocal": "2024-01-15T11:00:00",
+                "Miles": null,
+                "Rate": 12.50,
+                "Currency": "USD",
+                "Notes": "Airport to hotel - distance not tracked"
+              },
+              {
+                "Name": "Ola Cab",
+                "VendorName": "Ola",
+                "StartCity": "Mumbai",
+                "EndCity": "Mumbai",
+                "StartDateLocal": "2024-01-16T09:00:00",
+                "EndDateLocal": "2024-01-16T09:20:00",
+                "Miles": 5.3,
+                "Rate": 6.25,
+                "Currency": "USD"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "ID": "62a28f9b-3d2e-58fd-ce04-8d5bdf0d68f7",
+      "ItinLocator": "TRIP-2024-002",
+      "TripName": "San Francisco tech conference",
+      "Employee": {
+        "EmployeeId": "E00512",
+        "LoginId": "priya.sharma@tata.com",
+        "FirstName": "Priya",
+        "LastName": "Sharma",
+        "Department": "Engineering",
+        "CostCenter": "CC-3400"
+      },
+      "TripPurpose": "Google Cloud Next conference",
+      "BookingDate": "2024-01-05T10:20:00Z",
+      "StartDateLocal": "2024-01-20T04:00:00",
+      "EndDateLocal": "2024-01-25T18:30:00",
+      "TotalEstimatedCost": 3847.80,
+      "PolicyCompliant": false,
+      "PolicyViolation": "Business class not pre-approved",
+      "Bookings": [
+        {
+          "BookingOwner": "ConcurTravel",
+          "BookingSource": "TravelAgent",
+          "RecordLocator": "XYZ789",
+          "Segments": {
+            "Air": [
+              {
+                "StartCityCode": "BLR",
+                "EndCityCode": "SFO",
+                "StartDateLocal": "2024-01-20T04:00:00",
+                "EndDateLocal": "2024-01-20T18:30:00",
+                "Cabin": "B",
+                "ClassOfService": "J",
+                "Vendor": "AI",
+                "VendorName": "Air India",
+                "FlightNumber": "AI-173",
+                "Duration": 1005
+              },
+              {
+                "StartCityCode": "SFO",
+                "EndCityCode": "BLR",
+                "StartDateLocal": "2024-01-25T11:30:00",
+                "EndDateLocal": "2024-01-27T00:45:00",
+                "Cabin": "B",
+                "ClassOfService": "J",
+                "Vendor": "AI",
+                "VendorName": "Air India",
+                "FlightNumber": "AI-174",
+                "Duration": 1005
+              }
+            ],
+            "Hotel": [
+              {
+                "Name": "San Francisco Marriott Marquis",
+                "VendorCode": "MAR",
+                "StartCity": "San Francisco",
+                "StartCountry": "US",
+                "StartDateLocal": "2024-01-20T16:00:00",
+                "EndDateLocal": "2024-01-25T11:00:00",
+                "DailyRate": 170.00,
+                "Currency": "USD",
+                "RoomType": "Standard King"
+              }
+            ],
+            "Ride": [
+              {
+                "Name": "Lyft",
+                "VendorName": "Lyft",
+                "StartCity": "San Francisco",
+                "EndCity": "San Francisco",
+                "StartDateLocal": "2024-01-20T18:45:00",
+                "EndDateLocal": "2024-01-20T19:30:00",
+                "Miles": 13.7,
+                "Rate": 35.80,
+                "Currency": "USD"
+              }
+            ],
+            "Car": [
+              {
+                "Name": "Enterprise Rent-A-Car",
+                "VendorName": "Enterprise",
+                "VendorCode": "ZE",
+                "PickupCity": "San Francisco",
+                "DropoffCity": "San Francisco",
+                "PickupDateLocal": "2024-01-21T09:00:00",
+                "DropoffDateLocal": "2024-01-25T10:00:00",
+                "VehicleClass": "Compact",
+                "EstimatedMiles": 120,
+                "DailyRate": 45.00,
+                "Currency": "USD"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "ID": "73b39g0c-4e3f-69ge-df15-9e6ceg1e79g8",
+      "ItinLocator": "TRIP-2024-003",
+      "TripName": "Delhi same-day return (ERROR)",
+      "Employee": {
+        "EmployeeId": "E00892",
+        "LoginId": "neha.singh@tata.com",
+        "FirstName": "Neha",
+        "LastName": "Singh",
+        "Department": "Finance",
+        "CostCenter": "CC-5100"
+      },
+      "TripPurpose": "Audit meeting (cancelled)",
+      "BookingDate": "2024-01-22T11:15:00Z",
+      "StartDateLocal": "2024-01-28T09:00:00",
+      "EndDateLocal": "2024-01-28T09:30:00",
+      "TotalEstimatedCost": 0.00,
+      "TripStatus": "Cancelled",
+      "Bookings": [
+        {
+          "BookingOwner": "ConcurTravel",
+          "BookingSource": "Online",
+          "RecordLocator": "ERROR001",
+          "Segments": {
+            "Air": [
+              {
+                "StartCityCode": "DEL",
+                "EndCityCode": "DEL",
+                "StartDateLocal": "2024-01-28T09:00:00",
+                "EndDateLocal": "2024-01-28T09:30:00",
+                "Cabin": "E",
+                "ClassOfService": "E",
+                "Vendor": "AI",
+                "VendorName": "Air India",
+                "FlightNumber": "AI-000",
+                "Duration": 30,
+                "Notes": "DATA ERROR: Same origin and destination"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "ID": "84c40h1d-5f4g-70hf-eg26-0f7dfh2f80h9",
+      "ItinLocator": "TRIP-2024-004",
+      "TripName": "Kolkata to Hyderabad vendor meeting",
+      "Employee": {
+        "EmployeeId": "E01205",
+        "LoginId": "vikram.rao@tata.com",
+        "FirstName": "Vikram",
+        "LastName": "Rao",
+        "Department": "Supply Chain",
+        "CostCenter": "CC-2800"
+      },
+      "TripPurpose": "Vendor contract negotiation",
+      "BookingDate": "2024-01-18T08:30:00Z",
+      "StartDateLocal": "2024-01-25T10:30:00",
+      "EndDateLocal": "2024-01-26T15:30:00",
+      "TotalEstimatedCost": 287.00,
+      "Bookings": [
+        {
+          "BookingOwner": "ConcurTravel",
+          "BookingSource": "Online",
+          "RecordLocator": "CCU2HYD",
+          "Segments": {
+            "Air": [
+              {
+                "StartCityCode": "CCU",
+                "EndCityCode": "HYD",
+                "StartDateLocal": "2024-01-25T10:30:00",
+                "EndDateLocal": "2024-01-25T12:45:00",
+                "Cabin": "E",
+                "ClassOfService": "Y",
+                "Vendor": "SG",
+                "VendorName": "SpiceJet",
+                "FlightNumber": "SG-147",
+                "Duration": 135
+              },
+              {
+                "StartCityCode": "HYD",
+                "EndCityCode": "CCU",
+                "StartDateLocal": "2024-01-26T13:15:00",
+                "EndDateLocal": "2024-01-26T15:30:00",
+                "Cabin": "E",
+                "ClassOfService": "Y",
+                "Vendor": "SG",
+                "VendorName": "SpiceJet",
+                "FlightNumber": "SG-148",
+                "Duration": 135
+              }
+            ],
+            "Hotel": [
+              {
+                "Name": "Fortune Park Vallabha",
+                "VendorCode": "LOCAL",
+                "StartCity": "Hyderabad",
+                "StartCountry": "IN",
+                "StartDateLocal": "2024-01-25T14:00:00",
+                "EndDateLocal": "2024-01-26T12:00:00",
+                "DailyRate": 92.00,
+                "Currency": "USD",
+                "RoomType": "Executive"
+              }
+            ],
+            "Ride": [
+              {
+                "Name": "Auto Rickshaw",
+                "VendorName": "Cash",
+                "StartCity": "Hyderabad",
+                "EndCity": "Hyderabad",
+                "StartDateLocal": "2024-01-25T18:00:00",
+                "EndDateLocal": "2024-01-25T18:15:00",
+                "Miles": null,
+                "Rate": 2.00,
+                "Currency": "USD",
+                "Notes": "Cash payment, no distance tracking"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

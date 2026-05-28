@@ -1,0 +1,38 @@
+{
+  "PostingDate": "2024-01-15T00:00:00",
+  "GoodsMovementCode": "03",
+  "to_MaterialDocumentItem": [
+    {
+      "Material": "DIESEL-001",
+      "MaterialDocumentItemText": "Diesel Fuel",
+      "Plant": "1000",
+      "EntryUnit": "L",
+      "QuantityInEntryUnit": "5000",
+      "MaterialDocument": "4900000001"
+    },
+    {
+      "Material": "DIESEL-001",
+      "MaterialDocumentItemText": "Diesel Fuel",
+      "Plant": "1000",
+      "EntryUnit": "GAL",
+      "QuantityInEntryUnit": "250",
+      "MaterialDocument": "4900000002"
+    },
+    {
+      "Material": "LPG-042",
+      "MaterialDocumentItemText": "Liquified Petroleum Gas",
+      "Plant": "2000",
+      "EntryUnit": "KG",
+      "QuantityInEntryUnit": "1200",
+      "MaterialDocument": "4900000003"
+    },
+    {
+      "Material": "DIESEL-001",
+      "MaterialDocumentItemText": "Diesel Fuel",
+      "Plant": "1000",
+      "EntryUnit": "L",
+      "QuantityInEntryUnit": "INVALID",
+      "MaterialDocument": "4900000004"
+    }
+  ]
+}

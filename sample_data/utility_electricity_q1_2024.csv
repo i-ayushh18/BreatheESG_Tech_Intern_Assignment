@@ -1,0 +1,7 @@
+account_number,meter_id,billing_start,billing_end,consumption,unit,demand_charge,tariff_code,facility_name
+AC-45001,MTR001,2024-01-03,2024-02-01,45230,kWh,0,COMM-B2,Mumbai Office
+AC-45001,MTR001,2024-02-01,2024-03-05,48100,kWh,0,COMM-B2,Mumbai Office
+AC-45002,MTR002,2024-01-03,2024-02-01,12,MWh,5000,IND-HT,Pune Factory
+AC-45002,MTR003,2024-01-15,2024-02-15,8500,kWh,0,IND-LT,Pune Factory - Annex
+AC-45002,MTR002,2024-02-01,2024-03-05,15,MWh,5200,IND-HT,Pune Factory
+AC-45001,MTR001,2024-05-10,2024-06-08,47000,kWh,0,COMM-B2,Mumbai Office
