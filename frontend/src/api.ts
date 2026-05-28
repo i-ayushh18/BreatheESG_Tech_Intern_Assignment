@@ -1,6 +1,19 @@
 import axios, { AxiosInstance } from 'axios';
 
-const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || 'http://localhost:8000/api';
+const inferApiBaseUrl = (): string => {
+  const configured = process.env.REACT_APP_API_BASE_URL;
+  if (configured && configured.trim()) {
+    return configured.trim();
+  }
+
+  if (typeof window !== 'undefined' && window.location.hostname.endsWith('onrender.com')) {
+    return 'https://breatheesg-tech-intern-assignment.onrender.com/api';
+  }
+
+  return 'http://localhost:8000/api';
+};
+
+const API_BASE_URL = inferApiBaseUrl();
 
 export const api: AxiosInstance = axios.create({
   baseURL: API_BASE_URL,
