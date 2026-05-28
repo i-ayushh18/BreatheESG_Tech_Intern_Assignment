@@ -12,7 +12,26 @@ SECRET_KEY = os.environ.get(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG', 'True').lower() == 'true'
 
-ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '*').split(',')
+def _split_csv_env(name: str, default: str = ''):
+    raw = os.environ.get(name, default)
+    return [item.strip() for item in raw.split(',') if item.strip()]
+
+
+def _sanitize_host(host: str) -> str:
+    value = host.strip()
+    if value.startswith('http://'):
+        value = value[len('http://'):]
+    elif value.startswith('https://'):
+        value = value[len('https://'):]
+    return value.rstrip('/')
+
+
+ALLOWED_HOSTS = [_sanitize_host(host) for host in _split_csv_env('ALLOWED_HOSTS', '*')]
+render_external_hostname = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
+if render_external_hostname:
+    sanitized_render_host = _sanitize_host(render_external_hostname)
+    if sanitized_render_host not in ALLOWED_HOSTS:
+        ALLOWED_HOSTS.append(sanitized_render_host)
 
 
 # Application definition
@@ -125,9 +144,10 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 CORS_ALLOWED_ORIGINS = os.environ.get(
     'CORS_ALLOWED_ORIGINS',
     'http://localhost:3000,http://127.0.0.1:3000'
-).split(',')
+)
+CORS_ALLOWED_ORIGINS = _split_csv_env('CORS_ALLOWED_ORIGINS', CORS_ALLOWED_ORIGINS)
 CORS_ALLOW_CREDENTIALS = True
-CSRF_TRUSTED_ORIGINS = os.environ.get('CSRF_TRUSTED_ORIGINS', '').split(',') if os.environ.get('CSRF_TRUSTED_ORIGINS') else []
+CSRF_TRUSTED_ORIGINS = _split_csv_env('CSRF_TRUSTED_ORIGINS', '')
 
 # REST Framework settings
 REST_FRAMEWORK = {
