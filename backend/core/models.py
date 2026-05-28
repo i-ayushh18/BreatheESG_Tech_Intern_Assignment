@@ -96,7 +96,7 @@ class EmissionFactor(models.Model):
 	grid_region = models.CharField(max_length=32, blank=True, null=True)
 	transport_mode = models.CharField(max_length=32, blank=True, null=True)
 	factor_value = models.FloatField()
-	unit = models.CharField(max_length=16)
+	unit = models.CharField(max_length=32)
 	source = models.CharField(max_length=64)
 	valid_from = models.IntegerField()
 	valid_to = models.IntegerField()
